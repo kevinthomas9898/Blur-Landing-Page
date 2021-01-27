@@ -1,0 +1,162 @@
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.showcase::after {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  background: url(./images/showcase.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  filter: blur(10px);
+  transition: ease-in-out all 1000ms;
+  /* -webkit-filter: blur(10px); */
+  z-index: 1;
+}
+
+.showcase:hover::after {
+  filter: blur(0px);
+}
+
+.showcase:hover .content {
+  filter: blur(2px);
+  transition: all 1000ms ease-in-out;
+}
+
+.content {
+  position: absolute;
+  z-index: 22;
+  top: 10%;
+  left: 50%;
+  margin-top: 90px;
+  margin-left: -145px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  transition: all 1000ms;
+}
+
+.content .logo {
+  height: 180px;
+  width: 180px;
+  z-index: 3;
+}
+
+.content .title {
+  font-size: 2.2rem;
+  margin-top: 1rem;
+}
+
+.content .text {
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.container {
+  max-width: 71%;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.bg-light {
+  background: white;
+  color: black;
+}
+
+.bg-dark {
+  background: black;
+  color: white;
+}
+
+footer p {
+  padding: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .showcase::after {
+    height: 50vh;
+  }
+
+  footer p {
+    padding: 0;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .services div {
+    border-bottom: dashed white 1px;
+    padding: 1.2rem 1rem;
+  }
+
+  .services .container {
+    margin-top: 60px;
+  }
+
+  .logo {
+    height: 140px;
+    width: 140px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .grid-3 p,
+  .grid-2 p {
+    font-size: 14px;
+  }
+
+  .grid-3 i,
+  .grid-2 i {
+    font-size: 60px;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 500px) {
+  .content .title,
+  .content .text {
+    display: none;
+  }
+
+  .content {
+    top: 0;
+  }
+}

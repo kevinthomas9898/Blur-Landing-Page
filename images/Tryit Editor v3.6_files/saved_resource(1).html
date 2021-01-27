@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#leftSideNav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#rightSideNav a {
+  position: absolute;
+  left: 640px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+#leftSideNav a:hover {
+  left: 0;
+}
+
+#rightSideNav a:hover {
+  right: 0;
+}
+
+#about {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+#blog {
+  top: 80px;
+  background-color: #2196F3;
+}
+
+#projects {
+  top: 20px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 80px;
+  background-color: #555
+}
+</style>
+</head>
+<body contenteditable="false">
+
+<div id="leftSideNav" class="sidenav">
+  <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons#" id="about">About</a>
+  <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons#" id="blog">Blog</a>
+  <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons#" id="new1">new1</a>
+</div>
+<div id="rightSideNav" class="sidenav">
+  <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons#" id="new2">new2</a>
+  <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons#" id="projects">Projects</a>
+  <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons#" id="contact">Contact</a>
+</div>
+
+<div style="margin-left:80px;">
+  <h2>Hoverable Sidenav Buttons</h2>
+  <p>Hover over the buttons in the left side navigation to open them.</p>
+</div>
+   
+
+ 
+</body></html>
